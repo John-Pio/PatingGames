@@ -1,8 +1,9 @@
-<footer>
+
+<footer class="TopBar">
     <section class="copyright">
         <a><img src="https://placehold.co/25" alt="Website Logo"></a>
-        <p>© <?php date(Y) ?> teampating</p>
-        <p>All rights deserved.</p>
+        <p>© <?php echo date("h:i:sa"); ?> teampating</p>
+        <p>All rights reserved.</p>
     </section>
     <section class="categories">
         <ul>

@@ -61,6 +61,12 @@ nav ul li {
 .TopBar {
     background-color: rgb(55, 74, 60);
 }
+.TopBar a{
+    font-size: 18px;
+    text-align: center;
+    color: rgb(211, 240, 219);
+    text-decoration: none;
+}
 
 /* Main Styles */
 
