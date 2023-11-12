@@ -2,7 +2,7 @@
 <footer class="TopBar">
     <section class="copyright">
         <a><img src="https://placehold.co/25" alt="Website Logo"></a>
-        <p>© <?php echo date("h:i:sa"); ?> teampating</p>
+        <p>© 2023-<?php echo date("Y"); ?> TeamPating</p>
         <p>All rights reserved.</p>
     </section>
     <section class="categories">
