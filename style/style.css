@@ -9,8 +9,12 @@ body {
     background-color:rgb(128, 223, 128)
 }
 
-a, h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul {
+  padding: 0;
 }
 
 li {
@@ -28,6 +32,7 @@ nav {
 }
 
 nav a {
+    font-weight: bold;
     font-size: 18px;
     text-align: center;
     color: rgb(211, 240, 219);
@@ -74,7 +79,7 @@ main #best {
 
 main ul {
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1em;
 }
 
@@ -84,8 +89,9 @@ main .card {
     width: 200px;
 }
 
-main .card .info h3 {
-    text-align: center;
+main .card .info {
+  margin: 1em 0;
+  padding: 0 1em;
 }
 
 /* Footer Styles */
