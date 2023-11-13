@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+
+/* Variables */
+
+:root {
+    --width: 1150px;
+}
+
+/* Global Styles */
+
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color:rgb(128, 223, 128);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* Navigation Styles */
+
+nav {
+    height: 100px;
+    width: var(--width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(211, 240, 219);
+}
+
+nav ul {
+    display: flex;
+    gap: 2em;
+}
+
+nav ul li {
+    color: black;
+}
+
+.HoverTime{
+    border-radius: 5px;
+    padding: 3px;
+
+}
+.HoverTime:hover
+{
+    background-color: rgb(155, 207, 169);
+}
+
+.TopBar {
+    background-color: rgb(55, 74, 60);
+}
+.TopBar a{
+    font-size: 18px;
+    text-align: center;
+    color: rgb(211, 240, 219);
+}
+
+/* Main Styles */
+
+main {
+    margin: 4em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+main #best {
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+main ul {
+    width: var(--width);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2em;
+}
+
+main .card {
+    background-color: #ede0c8;
+    height: max-content;
+    width: 200px;
+    border-radius: 5px;
+}
+
+main .card .info {
+    margin: 1em 0;
+    padding: 0 1em;
+    color: black;
+}
+
+/* Footer Styles */
+
+footer {
+    color: white;
+}
+
+footer .container {
+    width: var(--width);
+    margin: auto;
+    padding: 2em 0;
+    display: flex;
+    gap: 8em;
+}
+
+footer .container section {
+    margin-top: 1em;
+}
+
+footer .container .copyright a img {
+    padding-bottom: 0.5em;
+}
+
+/* Responsive Styles */
+
+/* Mobile Portrait */
+@media only screen and (max-width: 767px) {
+
+    :root {
+        --width: 90%;
+    }
+
+    nav {
+        height: 70px;
+        justify-content: center;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    main {
+        margin: 2em 0;
+    }
+
+    main ul {
+        width: var(--width);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        gap: 1em;   
+    } 
+
+    main .card {
+        width: 150px;
+    }
+
+    main .card .info {
+        margin: 0.5em 0;
+    }
+
+    main .card .info > * {
+        font-size: 1em;
+    }
+
+    main .card a img {
+        height: auto;
+        width: 100%;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Tablet Landscape */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+    :root {
+        --width: 80%;
+    }
+
+    main ul {
+        width: var(--width);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em;   
+    } 
+
+    footer .container {
+        gap: 2em;
+    }
+}
