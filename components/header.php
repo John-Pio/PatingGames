@@ -1,16 +1,16 @@
-<div class="TopBar">
-    <nav>
+<nav>
+    <div class="container">
         <a><img src="https://placehold.co/50" alt="Website Logo"></a>
-        <ul class="nav-links">
+        <ul role="list">
             <li>
-                <div class="HoverTime"><a href="index.php">Home</div></a>
+                <a href="index.php">Home</a>
             </li>
             <li>
-                <div class="HoverTime"><a href="contact.php">Contact Us</div></a>
+                <a href="contact.php">Contact Us</a>
             </li>
             <li>
-                <div class="HoverTime"><a href="about.php">About Us</div></a>
+                <a href="about.php">About Us</a>
             </li>
         </ul>
-    </nav>
-</div>
+    </div>
+</nav>

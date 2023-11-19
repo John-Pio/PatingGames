@@ -1,4 +1,4 @@
-<footer class="TopBar">
+<footer>
     <div class="container">
         <section class="copyright">
             <a><img src="https://placehold.co/100" alt="Website Logo"></a>
@@ -6,25 +6,25 @@
             <p>All rights reserved.</p>
         </section>
         <section class="categories">
-            <ul>
-                <h3>Link header</h5>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+            <h4>Link header</h4>
+            <ul role="list">
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
             </ul>
         </section>
         <section class="links">
-            <ul>
-                <h3>Link header</h5>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
-                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+            <h4>Link header</h4>
+            <ul role="list">
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
+                <li><a href="#">Lorem, ipsum dolor.</a></li>
             </ul>
         </section>
     </div>
