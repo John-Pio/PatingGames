@@ -1,0 +1,35 @@
+main {
+    margin: 4em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main ul {
+    width: var(--width);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+main .card {
+    background-color: #fff;
+    height: max-content;
+    border-radius: 5px;
+}
+
+main .card .thumbnail img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+main .card .info {
+    padding: .75em;
+    color: black;
+}
+
+main .card .info p {
+    font-size: 14px;
+}
