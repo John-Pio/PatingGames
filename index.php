@@ -13,18 +13,22 @@
     <main>
         <ul role="list">
             <li class="card">
-                <a href="game.php">
+
+
                     <div class="thumbnail">
                         <img src="https://placehold.co/200" alt="Game Thumbnail">
                     </div>
-                    <div class="info">
-                        <h4>Lorem, ipsum.</h4>
-                        <p>Lorem ipsum dolor sit.</p>
-                    </div>
-                </a>
+                        <div class="info">
+                            <h4>Lorem, ipsum.</h4>
+                            <p>Lorem ipsum dolor sit.</p>
+                        </div>
+                    <?php //ayroun make it look good ?>
+                    <form action='game.php' method='get'>
+                        <button name="PlayButton" value="YouHaveChosen2048" type="submit">PLAY</button>
+                    </form>
             </li>
             <li class="card">
-                <a href="game.php">
+
                     <div class="thumbnail">
                         <img src="https://placehold.co/200" alt="Game Thumbnail">
                     </div>
@@ -32,7 +36,10 @@
                         <h4>Lorem, ipsum.</h4>
                         <p>Lorem ipsum dolor sit.</p>
                     </div>
-                </a>
+                <form action='game.php' method='get'>
+                    <button name="PlayButton" value="YouHaveChosenTetris" type="submit">PLAY</button>
+                </form>
+
             </li>
             <li class="card">
                 <a href="game.php">

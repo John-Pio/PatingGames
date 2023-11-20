@@ -6,6 +6,7 @@ A finals requirement for Event-Driven Programming subject for School Year 2023-2
 #### Games Featured
 
 - [2048 GAME](https://codepen.io/fabi_yo_/pen/zNrmwZ) (*pure HTML, CSS and JS*) by Fabian Richter
+- [Canvas Tetris] (https://github.com/dionyziz/canvas-tetris) by Dionysis "dionyziz" Zindros
 
 #### Resources
 
