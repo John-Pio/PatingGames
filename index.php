@@ -4,8 +4,8 @@
   <meta name="Viewport" content="width=device-width, initial-scale=1">
   <title>Home | PatingGames</title>
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/homepage.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
