@@ -1,35 +1,62 @@
 main {
-    margin: 4em 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 4em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main ul {
-    width: var(--width);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1em;
+  width: var(--width);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
 }
 
 main .card {
-    background-color: #fff;
-    height: max-content;
-    border-radius: 5px;
+  background-color: #fff;
+  height: max-content;
+  border-radius: 5px;
+}
+
+main .card .thumbnail {
+  overflow: hidden;
 }
 
 main .card .thumbnail img {
-    border-radius: 5px 5px 0 0;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: 0.25s ease-in-out;
+}
+
+main .card:hover img {
+  transform: scale(1.25);
 }
 
 main .card .info {
-    padding: .75em;
-    color: black;
+  padding: 0.75em;
+  color: black;
+}
+
+main .card .info form {
+  padding-top: 0.5em;
+}
+
+main .card .info button {
+  background-color: #3d9753;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 0.8em;
+}
+
+main .card .info button:hover {
+  background-color: #72d58b;
+  transition: 0.25s ease-in-out;
 }
 
 main .card .info p {
-    font-size: 14px;
+  font-size: 14px;
 }
