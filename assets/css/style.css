@@ -76,7 +76,7 @@ select {
 body {
   --accent: #3d9753;
   --accent-tint: #abeabb;
-  --accent-shade: #0f7128;
+  --accent-shade: #5fd37a;
   --background: #fff;
   --background-shade: #f5f5f5;
   --text: #000;
@@ -87,9 +87,9 @@ body {
 body.dark {
   --accent: #336c41;
   --accent-tint: #3d6848;
-  --accent-shade: #1d7333;
-  --background: #262626;
-  --background-shade: #222;
+  --accent-shade: #2e5538;
+  --background: #222;
+  --background-shade: #262626;
   --text: #f5f5f5;
   --shadow: rgba(50, 50, 50, 1);
   --secondary: #315064;
@@ -122,17 +122,17 @@ body {
   background-color: var(--background-shade);
   display: flex;
   flex-direction: column;
-  transition: var(--transition);
 }
 
 header,
 footer {
   background-color: var(--background);
-  transition: var(--transition);
 }
 
 header {
   box-shadow: 0 1px 0 var(--shadow);
+  position: sticky;
+  top: 0;
 }
 
 header nav {
@@ -161,6 +161,10 @@ header nav ul li:hover {
 
 header nav #menubr {
   display: none;
+}
+
+header nav img {
+  cursor: pointer;
 }
 
 main {
@@ -260,7 +264,7 @@ footer .container .icons ul {
     gap: 0;
   }
 
-  footer .container :nth-child(4) {
+  footer .container section:nth-child(4) {
     order: -1;
   }
 }

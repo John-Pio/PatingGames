@@ -30,10 +30,10 @@
     <section class="icons">
       <h4>Follow Us</h4>
       <ul role="list">
-        <li><a href=""><img src="./assets/img/facebook-logo.svg" alt=""></a></li>
-        <li><a href=""><img src="./assets/img/x-logo.svg" alt=""></a></li>
-        <li><a href=""><img src="./assets/img/discord-logo.svg" alt=""></a></li>
-        <li><a href=""><img src="./assets/img/github-logo.svg" alt=""></a></li>
+        <li><a href="https://www.facebook.com"><img src="./assets/img/facebook-logo.svg" alt="Facebook Logo"></a></li>
+        <li><a href="https://twitter.com"><img src="./assets/img/x-logo.svg" alt="Twitter Logo"></a></li>
+        <li><a href="https://discord.com/"><img src="./assets/img/discord-logo.svg" alt="Discord Logo"></a></li>
+        <li><a href="https://github.com/John-Pio/PatingGames"><img src="./assets/img/github-logo.svg" alt="GitHub Logo"></a></li>
       </ul>
     </section>
   </div>
