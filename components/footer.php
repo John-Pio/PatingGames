@@ -1,7 +1,7 @@
 <footer>
   <div class="container">
     <section class="copyright">
-      <a><img src="https://placehold.co/100" alt="Website Logo"></a>
+      <a><img width="150px" src="./assets/img/SharkLogo.svg" alt="Website Logo"></a>
       <p>© 2023-<?php echo date("Y"); ?> TeamPating</p>
       <p>All rights reserved.</p>
     </section>

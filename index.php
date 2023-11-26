@@ -2,6 +2,16 @@
 $name = "dark";
 if (!isset($_COOKIE[$name]))
   setcookie($name, "false", strtotime('Thu, 18 Dec 2030 12:00:00'), "/PatingGames");
+
+$games = array(
+  (object) [
+    'title' => '2048',
+    'desc' => 'A 2048 website game created by Fabian Richter',
+  ], (object) [
+    'title' => 'Canvas Tetris',
+    'desc' => 'A tetris website game created by Dionysis Zindros'
+  ]
+);
 ?>
 
 

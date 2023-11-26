@@ -1,7 +1,7 @@
 <header>
   <nav>
     <div class="left">
-      <a href="index.php"><img src="../assets/img/SharkLogo.svg" alt="Website Logo"></a>
+      <a href="index.php"><img width="50px" height="50px" src="./assets/img/SharkLogo.svg" alt="Website Logo"></a>
       <img id="menubr" src="./assets/img/menu.svg" alt="Menu Icon">
       <form method="get">
         <input type="text" name="search" id="search" placeholder="Search a game!">
