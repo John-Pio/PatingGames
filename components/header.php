@@ -1,7 +1,7 @@
 <header>
   <nav>
     <div class="left">
-      <a><img src="https://placehold.co/50" alt="Website Logo"></a>
+      <a href="index.php"><img src="../assets/img/SharkLogo.svg" alt="Website Logo"></a>
       <img id="menubr" src="./assets/img/menu.svg" alt="Menu Icon">
       <form method="get">
         <input type="text" name="search" id="search" placeholder="Search a game!">
