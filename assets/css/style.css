@@ -78,6 +78,7 @@ body {
   --accent-tint: #abeabb;
   --accent-shade: #5fd37a;
   --background: #fff;
+  --background-tint: #eee;
   --background-shade: #f5f5f5;
   --text: #000;
   --shadow: rgba(50, 50, 50, 0.07);
@@ -89,7 +90,8 @@ body.dark {
   --accent-tint: #3d6848;
   --accent-shade: #2e5538;
   --background: #222;
-  --background-shade: #262626;
+  --background-tint: #4f4f4f;
+  --background-shade: #2f2f2f;
   --text: #f5f5f5;
   --shadow: rgba(50, 50, 50, 1);
   --secondary: #315064;
@@ -142,6 +144,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: var(--transition-hover);
 }
 
 header nav ul {
@@ -165,6 +168,40 @@ header nav #menubr {
 
 header nav img {
   cursor: pointer;
+}
+
+header nav .left {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+header nav .left form {
+  margin: 0;
+}
+
+header nav .left #search {
+  transition: var(--transition-hover);
+  background-color: var(--background-shade);
+  border: none;
+  border-radius: 0.5em;
+  caret-color: var(--text);
+  color: var(--text);
+  width: 500px;
+  height: 40px;
+  padding: 0 1em;
+}
+
+header nav .left #search::placeholder {
+  font-style: italic;
+}
+
+header nav .left #search:hover {
+  background-color: var(--background-tint);
+}
+
+header nav .left #search:focus-visible {
+  outline: 3px solid var(--accent);
 }
 
 main {
@@ -212,6 +249,10 @@ footer .container .icons ul {
     --width: 85%;
   }
 
+  header nav .left #search {
+    width: 200px;
+  }
+
   footer .container {
     gap: 2em;
   }
@@ -252,6 +293,10 @@ footer .container .icons ul {
 
   header nav #menubr {
     display: block;
+  }
+
+  header nav .left form {
+    display: none;
   }
 
   main {
