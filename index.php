@@ -52,7 +52,7 @@ if (!isset($_COOKIE[$name]))
           <h4>Lorem, ipsum.</h4>
           <p>Lorem ipsum dolor sit.</p>
           <form action='game.php' method='get'>
-            <button name="PlayButton" value="YouHaveChosenTetris" type="submit">PLAY</button>
+            <button name="PlayButton" value="YouHaveChosenMonsterEating" type="submit">PLAY</button>
           </form>
         </div>
       </li>
@@ -64,7 +64,7 @@ if (!isset($_COOKIE[$name]))
           <h4>Lorem, ipsum.</h4>
           <p>Lorem ipsum dolor sit.</p>
           <form action='game.php' method='get'>
-            <button name="PlayButton" value="YouHaveChosenTetris" type="submit">PLAY</button>
+            <button name="PlayButton" value="YouHaveChosenThereIsNoGame" type="submit">PLAY</button>
           </form>
         </div>
       </li>
@@ -76,7 +76,7 @@ if (!isset($_COOKIE[$name]))
           <h4>Lorem, ipsum.</h4>
           <p>Lorem ipsum dolor sit.</p>
           <form action='game.php' method='get'>
-            <button name="PlayButton" value="YouHaveChosenTetris" type="submit">PLAY</button>
+            <button name="PlayButton" value="YouHaveChosenUltraPixelSurvive" type="submit">PLAY</button>
           </form>
         </div>
       </li>
@@ -88,7 +88,7 @@ if (!isset($_COOKIE[$name]))
           <h4>Lorem, ipsum.</h4>
           <p>Lorem ipsum dolor sit.</p>
           <form action='game.php' method='get'>
-            <button name="PlayButton" value="YouHaveChosenTetris" type="submit">PLAY</button>
+            <button name="PlayButton" value="YouHaveChosenPixelBearAdventure" type="submit">PLAY</button>
           </form>
         </div>
       </li>
@@ -100,7 +100,7 @@ if (!isset($_COOKIE[$name]))
           <h4>Lorem, ipsum.</h4>
           <p>Lorem ipsum dolor sit.</p>
           <form action='game.php' method='get'>
-            <button name="PlayButton" value="YouHaveChosenTetris" type="submit">PLAY</button>
+            <button name="PlayButton" value="YouHaveRedTieRunner" type="submit">PLAY</button>
           </form>
         </div>
       </li>
