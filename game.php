@@ -7,6 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="assets/css/gamepage.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>

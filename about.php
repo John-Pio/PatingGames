@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/about.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>

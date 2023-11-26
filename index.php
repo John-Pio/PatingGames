@@ -1,3 +1,10 @@
+<?php
+$name = "dark";
+if (!isset($_COOKIE[$name]))
+  setcookie($name, "false", strtotime('Thu, 18 Dec 2030 12:00:00'), "/PatingGames");
+?>
+
+
 <!DOCTYPE html>
 
 <head>
@@ -6,6 +13,7 @@
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/homepage.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
