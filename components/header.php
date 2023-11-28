@@ -3,8 +3,10 @@
     <div class="left">
       <a href="index.php"><img width="50px" height="50px" src="./assets/img/SharkLogo.svg" alt="Website Logo"></a>
       <img id="menubr" src="./assets/img/menu.svg" alt="Menu Icon">
-      <form method="get">
-        <input type="text" name="search" id="search" placeholder="Search a game!">
+      <?php
+      if (basename($_SERVER['PHP_SELF']) === 'index.php')
+        echo "<form method='get'>
+          <input type='text' name='search' id='search' placeholder='Search a game!'>"; ?>
       </form>
     </div>
     <div class="right">
@@ -23,10 +25,3 @@
     </div>
   </nav>
 </header>
-
-<script>
-  const menu = document.getElementById('menubr')
-  const links = document.getElementById('navlnk')
-
-  menu.addEventListener('click', () => links.classList.toggle('active'))
-</script>

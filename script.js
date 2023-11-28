@@ -15,3 +15,8 @@ toggle.addEventListener('click', () => {
   const isDark = body.classList.contains('dark')
   document.cookie = `dark=${isDark}; expires=Thu, 18 Dec 2030 12:00:00`
 })
+
+const menu = document.getElementById('menubr')
+const links = document.getElementById('navlnk')
+
+menu.addEventListener('click', () => links.classList.toggle('active'))
