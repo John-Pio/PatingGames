@@ -1,19 +1,54 @@
 main {
-  margin: 4em 0;
+  margin: 1em 0 2em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-main ul {
+main #categories {
+  background-color: var(--background);
+  width: var(--width);
+  height: min-content;
+  border-radius: var(--border);
+  margin-bottom: 1em;
+  padding: 1em;
+  display: flex;
+  gap: 0.5em;
+}
+
+main #categories button {
+  height: 45px;
+}
+
+main #list {
   width: var(--width);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1em;
 }
 
+main button {
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--border);
+  padding: 0.5em 0.8em;
+  transition: var(--transition);
+}
+
+main #list button:hover {
+  background-color: var(--accent-shade);
+}
+
+main button:hover {
+  transition: var(--transition-hover);
+  transform: translate(0, -2px);
+}
+
 main,
-main ul,
+main #list,
+main #categories,
 .container {
   transition: var(--transition-hover);
 }
@@ -21,7 +56,7 @@ main ul,
 main .card {
   background-color: var(--background);
   height: max-content;
-  border-radius: 5px;
+  border-radius: var(--border);
   transition: var(--transition);
 }
 
@@ -30,7 +65,7 @@ main .card .thumbnail {
 }
 
 main .card .thumbnail img {
-  border-radius: 5px 5px 0 0;
+  border-radius: var(--border) var(--border) 0 0;
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -51,24 +86,80 @@ main .card .info form {
   padding-top: 0.5em;
 }
 
-main .card .info button {
-  background-color: var(--accent);
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  padding: 0.5em 0.8em;
-  transition: var(--transition);
-}
-
-main .card .info button:hover {
-  background-color: var(--accent-shade);
-  transition: var(--transition-hover);
-}
-
 main .card .info p {
   font-size: 14px;
 }
+
+.arcade {
+background-color: rgb(210, 133, 88);
+box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .25);
+}
+
+.adventure {
+background-color: rgb(133, 199, 22);
+box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .25);
+}
+
+.casual {
+background-color: rgb(80, 169, 249);
+box-shadow: 0 8px 18px -8px rgba(80, 169, 249, .25);
+}
+
+.puzzle {
+background-color: rgb(255, 163, 0);
+box-shadow: 0 8px 18px -8px rgba(255, 163, 0, .25);
+}
+
+.racing {
+background-color: rgb(203, 125, 246);
+box-shadow: 0 8px 18px -8px rgba(203, 125, 246, .25);
+}
+
+.shooter {
+background-color: rgb(255, 74, 82);
+box-shadow: 0 8px 18px -8px rgba(255, 74, 82, .25);
+}
+
+.sports {
+background-color: rgb(64, 201, 20);
+box-shadow: 0 8px 18px -8px rgba(64, 201, 20, .25);
+}
+
+body.dark .arcade {
+background-color: rgb(193, 103, 51);
+box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .25);
+}
+
+body.dark .adventure {
+background-color: rgb(99, 147, 16);
+box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .25);
+}
+
+body.dark .casual {
+background-color: rgb(45, 143, 228);
+box-shadow: 0 8px 18px -8px rgba(80, 169, 249, .25);
+}
+
+body.dark .puzzle {
+background-color: rgb(224, 142, 0);
+box-shadow: 0 8px 18px -8px rgba(255, 163, 0, .25);
+}
+
+body.dark .racing {
+background-color: rgb(173, 78, 224);
+box-shadow: 0 8px 18px -8px rgba(203, 125, 246, .25);
+}
+
+body.dark .shooter {
+background-color: rgb(228, 93, 100);
+box-shadow: 0 8px 18px -8px rgba(255, 74, 82, .25);
+}
+
+body.dark .sports {
+background-color: rgb(77, 177, 44);
+box-shadow: 0 8px 18px -8px rgba(64, 201, 20, .25);
+}
+
 
 .backtop {
   border-radius: 25px;
@@ -82,4 +173,10 @@ main .card .info p {
 
 .backtop:hover {
   background-color: var(--accent-tint);
+}
+
+@media only screen and (max-width: 749px) {
+  main .categories {
+    display: none;
+  }
 }

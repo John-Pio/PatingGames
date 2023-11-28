@@ -10,6 +10,21 @@ $games = array(
   ], (object) [
     'title' => 'Canvas Tetris',
     'desc' => 'A tetris website game created by Dionysis Zindros'
+  ], (object) [
+    'title' => 'Monster Eating',
+    'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+  ], (object) [
+    'title' => 'There Is No Game',
+    'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+  ], (object) [
+    'title' => 'Ultra Pixel Survive',
+    'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+  ], (object) [
+    'title' => 'Pixel Bear Adventure',
+    'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+  ], (object) [
+    'title' => 'Red Tie Runner',
+    'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
   ]
 );
 ?>
@@ -24,11 +39,22 @@ $games = array(
   <link rel="stylesheet" href="assets/css/homepage.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="script.js" defer></script>
+
+
 </head>
 
 <body>
   <?php require 'components/header.php' ?>
   <main>
+    <ul id="categories" role="list">
+      <?php
+      $buttons = array("Arcade", "Adventure", "Casual", "Sports", "Puzzle", "Racing", "Shooter");
+
+      foreach ($buttons as $name) {
+        echo "<li><button class='" . strtolower($name) . "'>{$name}</button></li>";
+      }
+      ?>
+    </ul>
     <ul id="list" role="list">
       <?php
 
@@ -52,7 +78,7 @@ $games = array(
               <h4>{$game->title}</h4>
               <p>{$game->desc}</p>
               <form action='game.php' method='get'>
-                <button name='PlayButton' value='YouHaveChosen2048' type='submit'>PLAY</button>
+                <button name='PlayButton' value='{$game->title}' type='submit'>PLAY</button>
               </form>
             </div>
           </li>";
@@ -71,7 +97,7 @@ $games = array(
               <h4>{$game->title}</h4>
               <p>{$game->desc}</p>
               <form action='game.php' method='get'>
-                <button name='PlayButton' value='YouHaveChosen2048' type='submit'>PLAY</button>
+                <button name='PlayButton' value='{$game->title}' type='submit'>PLAY</button>
               </form>
             </div>
           </li>";
@@ -86,8 +112,8 @@ $games = array(
         </script>";
       }
       ?>
+      <a class="backtop" href="#"><img src="./assets/img/backtop.svg" alt="Back to Top"></a>
   </main>
-  <a class="backtop" href="#"><img src="./assets/img/backtop.svg" alt="Back to Top"></a>
   <?php require 'components/footer.php' ?>
 </body>
 
