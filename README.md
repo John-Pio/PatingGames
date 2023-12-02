@@ -11,6 +11,8 @@ A finals requirement for Event-Driven Programming subject for School Year 2023-2
 #### Resources
 
 - [Favicon.io](https://favicon.io/emoji-favicons/): For the websites favicon
+- [Material Icons](https://fonts.google.com/icons)
+- [SVG Repo](https://www.svgrepo.com/)
 
 #### Made by
 
