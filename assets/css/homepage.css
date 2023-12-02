@@ -13,11 +13,23 @@ main #categories {
   margin-bottom: 1em;
   padding: 1em;
   display: flex;
+  flex-flow: wrap;
   gap: 0.5em;
 }
 
-main #categories button {
+main #categories form {
+  width: max-content;
   height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+main #categories form input {
+  cursor: pointer;
+  color: var(--background-shade);
+  background: none;
+  border: none;
 }
 
 main #list {
@@ -29,6 +41,10 @@ main #list {
 
 main button {
   background-color: var(--accent);
+}
+
+main button, 
+main #categories form {
   color: #fff;
   font-weight: bold;
   border: none;
@@ -41,14 +57,14 @@ main #list button:hover {
   background-color: var(--accent-shade);
 }
 
-main button:hover {
+main button:hover, main form:hover {
   transition: var(--transition-hover);
   transform: translate(0, -2px);
 }
 
 main,
 main #list,
-main #categories,
+main #categories button,
 .container {
   transition: var(--transition-hover);
 }
@@ -90,6 +106,10 @@ main .card .info p {
   font-size: 14px;
 }
 
+.clear {
+  background-color: var(--shadow);
+}
+
 .arcade {
 background-color: rgb(210, 133, 88);
 box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .25);
@@ -123,6 +143,10 @@ box-shadow: 0 8px 18px -8px rgba(255, 74, 82, .25);
 .sports {
 background-color: rgb(64, 201, 20);
 box-shadow: 0 8px 18px -8px rgba(64, 201, 20, .25);
+}
+
+body.dark .clear {
+  background-color: var(--text);
 }
 
 body.dark .arcade {
@@ -176,7 +200,7 @@ box-shadow: 0 8px 18px -8px rgba(64, 201, 20, .25);
 }
 
 @media only screen and (max-width: 749px) {
-  main .categories {
+  main #categories {
     display: none;
   }
 }
