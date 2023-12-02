@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <main> patani </main>
   <?php
 
   require 'components/header.php';
