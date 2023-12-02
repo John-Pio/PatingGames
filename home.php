@@ -22,10 +22,12 @@ if (!isset($_COOKIE[$name]))
   <?php require 'components/header.php' ?>
   <main>
     <section>
-      <h3>Welcome to</h3>
-      <h1>PatingGames</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo iusto ut iste dolorum rem voluptates nobis similique ad tempora!</p>
-      <button type="button"><a href="#categories">Browse now!</a></button>
+      <div>
+        <h3>Welcome to</h3>
+        <h1>PatingGames</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo iusto ut iste dolorum rem voluptates nobis similique ad tempora!</p>
+        <a href="#categories">Browse now!</a>
+      </div>
       <img src="assets/img/SharkLogo.svg" alt="Website Logo">
     </section>
     <ul id="categories" role="list">

@@ -10,8 +10,35 @@ main section {
   width: var(--width);
   height: min-content;
   border-radius: var(--border);
-  margin: 1em 0;
-  padding: 1em;
+  margin-top: 1em;
+  padding: 2.5em 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+main section h3,
+main section h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+main section h1 {
+  font-size: 4em;
+  margin-bottom: 0.1em;
+}
+
+main section p {
+  width: 450px;
+  margin-bottom: 2em;
+}
+
+main section a {
+  font-weight: bold;
+  background-color: var(--accent);
+  color: var(--white);
+  border-radius: var(--border);
+  margin-top: 1em;
+  padding: 1em 1.5em;
+  transition: var(--transition);
 }
 
 main #categories {
@@ -19,7 +46,7 @@ main #categories {
   width: var(--width);
   height: min-content;
   border-radius: var(--border);
-  margin-bottom: 1em;
+  margin: 1em 0;
   padding: 1em;
   display: flex;
   flex-flow: wrap;
@@ -196,11 +223,13 @@ box-shadow: 0 8px 18px -8px rgba(64, 201, 20, .25);
   right: 25px;
 }
 
-main #list button:hover {
+main #list button:hover,
+main section a:hover {
   background-color: var(--accent-shade);
 }
 
-main button:hover, main form:hover {
+main button:hover,
+main form:hover {
   transition: var(--transition-hover);
   transform: translate(0, -2px);
 }
@@ -214,6 +243,30 @@ main .card:hover img {
 }
 
 @media only screen and (max-width: 749px) {
+  main {
+    margin: 1em 0;
+  }
+  
+  main section {
+    flex-direction: column;
+  }
+  
+  main section h1 {
+    font-size: 2em;
+  }
+
+  main section p {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  
+  main section img {
+    order: -1;
+    margin-bottom: 2em;
+  }
+  
+  main section a,
   main #categories {
     display: none;
   }

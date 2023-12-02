@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
 /* Consits of styles for
 0. css variables
 1. color theme
@@ -89,7 +91,7 @@ select {
 body {
   --accent: #3d9753;
   --accent-tint: #abeabb;
-  --accent-shade: #5fd37a;
+  --accent-shade: #59bb70;
   --background: #fff;
   --background-tint: #eee;
   --background-shade: var(--white);
@@ -312,10 +314,6 @@ footer .container .icons ul {
 
   header nav .left form {
     display: none;
-  }
-
-  main {
-    margin: 3em 0;
   }
 
   footer .container {
