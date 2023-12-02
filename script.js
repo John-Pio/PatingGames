@@ -4,14 +4,14 @@ const isDark = document.cookie.includes('dark=true')
 
 if (isDark) {
   body.classList.add('dark')
-  toggle.src = './assets/img/light-mode.svg'
+  toggle.src = './assets/img/icons/light.svg'
 }
 
 toggle.addEventListener('click', () => {
   body.classList.toggle('dark')
   if (body.classList.contains('dark'))
-    toggle.src = './assets/img/light-mode.svg'
-  else toggle.src = './assets/img/dark-mode.svg'
+    toggle.src = './assets/img/icons/light.svg'
+  else toggle.src = './assets/img/icons/dark.svg'
   const isDark = body.classList.contains('dark')
   document.cookie = `dark=${isDark}; expires=Thu, 18 Dec 2030 12:00:00`
 })

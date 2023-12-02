@@ -115,7 +115,7 @@ if (!isset($_COOKIE[$name]))
         </script>";
       }
       ?>
-      <a class="backtop" href="#"><img src="./assets/img/backtop.svg" alt="Back to Top"></a>
+      <a class="backtop" href="#"><img src="./assets/img/icons/top.svg" alt="Back to Top"></a>
   </main>
   <?php require 'components/footer.php' ?>
 </body>

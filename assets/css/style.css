@@ -193,7 +193,15 @@ header nav .left {
 }
 
 header nav .left form {
+  position: relative;
   margin: 0;
+}
+
+header nav form .search-icon {
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  transform: translateY(-50%);
 }
 
 header nav .left #search {
@@ -204,7 +212,7 @@ header nav .left #search {
   color: var(--text);
   width: 500px;
   height: 40px;
-  padding: 0 1em;
+  padding: 0 2.5em;
 }
 
 header nav .left #search::placeholder {
