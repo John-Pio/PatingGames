@@ -16,19 +16,25 @@ if (!isset($_COOKIE[$name]))
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="script.js" defer></script>
 
-
 </head>
 
 <body>
   <?php require 'components/header.php' ?>
   <main>
+    <section>
+      <h3>Welcome to</h3>
+      <h1>PatingGames</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo iusto ut iste dolorum rem voluptates nobis similique ad tempora!</p>
+      <button type="button"><a href="#categories">Browse now!</a></button>
+      <img src="assets/img/SharkLogo.svg" alt="Website Logo">
+    </section>
     <ul id="categories" role="list">
       <?php
       // For echoing the category buttons
       $buttons = array("arcade", "adventure", "casual", "sports", "puzzle", "racing", "shooter");
 
       foreach ($buttons as $name) {
-        echo "<li><form class='{$name}' method='post'><img src='assets/img/categories/{$name}.svg' alt='Category Icon'><input class={$name} type='submit' name='category' value=" . ucfirst($name) . "></input></form></li>";
+        echo "<li><form class='{$name}' method='post'><img src='assets/img/categories/{$name}.svg' alt='Category Icon'><input type='submit' name='category' value=" . ucfirst($name) . "></input></form></li>";
       }
       ?>
       <li>

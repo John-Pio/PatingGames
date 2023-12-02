@@ -5,6 +5,15 @@ main {
   align-items: center;
 }
 
+main section {
+  background-color: var(--background);
+  width: var(--width);
+  height: min-content;
+  border-radius: var(--border);
+  margin: 1em 0;
+  padding: 1em;
+}
+
 main #categories {
   background-color: var(--background);
   width: var(--width);
@@ -17,7 +26,7 @@ main #categories {
   gap: 0.5em;
 }
 
-main #categories form {
+main #categories li form {
   width: max-content;
   height: 45px;
   display: flex;
@@ -25,11 +34,15 @@ main #categories form {
   gap: 5px;
 }
 
-main #categories form input {
+main #categories li form input {
+  color: var(--white);
   cursor: pointer;
-  color: var(--background-shade);
   background: none;
   border: none;
+}
+
+main #categories li:last-child form input {
+  color: var(--background);
 }
 
 main #list {
@@ -51,15 +64,6 @@ main #categories form {
   border-radius: var(--border);
   padding: 0.5em 0.8em;
   transition: var(--transition);
-}
-
-main #list button:hover {
-  background-color: var(--accent-shade);
-}
-
-main button:hover, main form:hover {
-  transition: var(--transition-hover);
-  transform: translate(0, -2px);
 }
 
 main,
@@ -88,9 +92,6 @@ main .card .thumbnail img {
   transition: var(--transition-hover);
 }
 
-main .card:hover img {
-  transform: scale(1.25);
-}
 
 main .card .info {
   padding: 0.75em;
@@ -193,6 +194,19 @@ box-shadow: 0 8px 18px -8px rgba(64, 201, 20, .25);
   height: 50px;
   bottom: 25px;
   right: 25px;
+}
+
+main #list button:hover {
+  background-color: var(--accent-shade);
+}
+
+main button:hover, main form:hover {
+  transition: var(--transition-hover);
+  transform: translate(0, -2px);
+}
+
+main .card:hover img {
+  transform: scale(1.25);
 }
 
 .backtop:hover {

@@ -1,3 +1,11 @@
+/* Consits of styles for
+0. css variables
+1. color theme
+2. white and dark colors
+3. header
+4. footer
+5. website media queries */
+
 /* Andy Bell's Reset */
 *,
 *::before,
@@ -75,6 +83,7 @@ select {
   --transition: 0.75s;
   --transition-hover: 0.25s ease-in-out;
   --border: 5px;
+  --white: #f5f5f5;
 }
 
 body {
@@ -83,7 +92,7 @@ body {
   --accent-shade: #5fd37a;
   --background: #fff;
   --background-tint: #eee;
-  --background-shade: #f5f5f5;
+  --background-shade: var(--white);
   --text: #000;
   --shadow: rgb(50, 50, 50);
   --secondary: #83b7d7;
@@ -137,6 +146,7 @@ footer {
 
 header {
   box-shadow: 0 1px 0 var(--shadow);
+  z-index: 1;
   position: sticky;
   top: 0;
 }

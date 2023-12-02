@@ -16,7 +16,7 @@
   require 'components/header.php';
   require_once 'components/games.php';
 
-  $GameChoice = $_GET['PlayButton'];
+  $GameChoice = htmlentities($_GET['PlayButton']);
 
   if ($selected = array_filter($games, function ($game) use ($GameChoice) {
     return $game->title === $GameChoice;
