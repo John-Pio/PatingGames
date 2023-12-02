@@ -3,38 +3,6 @@
 $name = "dark";
 if (!isset($_COOKIE[$name]))
   setcookie($name, "false", strtotime('Thu, 18 Dec 2030 12:00:00'), "/PatingGames");
-
-$games = array(
-  (object) [
-    'title' => '2048',
-    'desc' => 'A 2048 website game created by Fabian Richter',
-    'tags' => ['casual', 'puzzle']
-  ], (object) [
-    'title' => 'Canvas Tetris',
-    'desc' => 'A tetris website game created by Dionysis Zindros',
-    'tags' => ['casual', 'arcade']
-  ], (object) [
-    'title' => 'Monster Eating',
-    'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-    'tags' => ['casual']
-  ], (object) [
-    'title' => 'There Is No Game',
-    'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-    'tags' => ['puzzle']
-  ], (object) [
-    'title' => 'Ultra Pixel Survive',
-    'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-    'tags' => ['shooter']
-  ], (object) [
-    'title' => 'Pixel Bear Adventure',
-    'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-    'tags' => ['adventure']
-  ], (object) [
-    'title' => 'Red Tie Runner',
-    'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-    'tags' => ['racing', 'arcade']
-  ]
-);
 ?>
 
 
@@ -68,6 +36,9 @@ $games = array(
     </ul>
     <ul id="list" role="list">
       <?php
+
+      require_once 'components/games.php';
+
       // For clicking the clear button
       if (isset($_POST['clear'])) {
         clearGames();
