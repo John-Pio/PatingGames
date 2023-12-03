@@ -17,11 +17,11 @@
   <main>
 
     <div class="about-section">
-      <h1>About Team Pating</h1>
-      <p>Welcome to Pating Games! We, The Team Pating are passionate about bringing fun and interactive gaming experiences to your browser using the power of HTML, CSS, and PHP.</p>
-      <p>Our goal is to provide a diverse collection of games that cater to different tastes and ages, all easily accessible through any modern web browser.</p>
-      <p>Whether you're a casual gamer or a seasoned pro, there's something here for everyone. Join us on this gaming journey!</p>
-      <p>Have fun!</p>
+      <h1 class="text">About Team Pating</h1>
+      <p class="text">Welcome to Pating Games! We, The Team Pating are passionate about bringing fun and interactive gaming experiences to your browser using the power of HTML, CSS, and PHP.</p>
+      <p class="text">Our goal is to provide a diverse collection of games that cater to different tastes and ages, all easily accessible through any modern web browser.</p>
+      <p class="text">Whether you're a casual gamer or a seasoned pro, there's something here for everyone. Join us on this gaming journey!</p>
+      <p class="text">Have fun!</p>
     </div>
 
     <h2 style="text-align:center">Our Team</h2>
