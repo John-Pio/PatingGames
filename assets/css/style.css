@@ -286,6 +286,11 @@ footer .container section ul {
   gap: 0.25em;
 }
 
+footer .container .categories,
+footer .container .links {
+  width: 10em;
+}
+
 footer .container h4 {
   padding-bottom: 0.25em;
 }

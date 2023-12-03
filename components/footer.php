@@ -77,18 +77,16 @@
       <p>All rights reserved.</p>
     </section>
     <section class="categories">
-      <h4>Link header</h4>
+      <h4>Links</h4>
       <ul role="list">
-        <li><a href="#">Lorem, ipsum dolor.</a></li>
-        <li><a href="#">Lorem, ipsum dolor.</a></li>
-        <li><a href="#">Lorem, ipsum dolor.</a></li>
-        <li><a href="#">Lorem, ipsum dolor.</a></li>
-        <li><a href="#">Lorem, ipsum dolor.</a></li>
-        <li><a href="#">Lorem, ipsum dolor.</a></li>
+        <li><a href="#">Home Page</a></li>
+        <li><a href="contact.php">Contact Page</a></li>
+        <li><a href="about.php">About Page</a></li>
+        <li><a href="https://github.com/John-Pio/PatingGames">Repository</a></li>
       </ul>
     </section>
     <section class="links">
-      <h4>Link header</h4>
+      <h4>Categories</h4>
       <ul role="list">
         <li><a href="#">Lorem, ipsum dolor.</a></li>
         <li><a href="#">Lorem, ipsum dolor.</a></li>
