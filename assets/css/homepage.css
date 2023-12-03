@@ -248,6 +248,7 @@ main .card:hover img {
   }
   
   main section {
+    margin: 1em 0;
     flex-direction: column;
   }
   
@@ -261,7 +262,7 @@ main .card:hover img {
   }
 
   
-  main section img {
+  main section svg {
     order: -1;
     margin-bottom: 2em;
   }

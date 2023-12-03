@@ -112,6 +112,39 @@ body.dark {
   --secondary: #315064;
 }
 
+.svg {
+  fill: var(--text);
+  transition: var(--transition);
+}
+
+.logo {
+  width: auto;
+}
+
+.st0 {
+  fill: #9A9A9A;
+}
+
+.st1 {
+  fill: #E0E0E0;
+}
+
+.st2 {
+  fill: #FF2B25;
+}
+
+.st3 {
+  fill: #2F2F2F;
+}
+
+.st4 {
+  fill: #FFFEFD;
+}
+
+.st5 {
+  fill: #606568;
+}
+
 ::selection {
   background: var(--secondary);
 }
@@ -257,7 +290,7 @@ footer .container h4 {
   padding-bottom: 0.25em;
 }
 
-footer .container img {
+footer .container svg.logo {
   padding-bottom: 1em;
 }
 
