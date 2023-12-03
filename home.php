@@ -107,7 +107,15 @@ if (!isset($_COOKIE[$name]))
     <h4 class="featured title">Featured</h4>
     <ul id="featured" role="list">
       <?php
-      searchGames('category', 'featured');
+      $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], null, "games");
+
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+
+      searchGames($conn, null, 'featured');
+
+      $conn->close();
       ?>
     </ul>
     <h4 class="title">Browse by category</h4>
@@ -130,63 +138,79 @@ if (!isset($_COOKIE[$name]))
     </ul>
     <ul id="list" role="list">
       <?php
+      $dbname = "games";
+      $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], null, $dbname);
+
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
 
       // For clicking the clear button
       if (isset($_POST['all'])) {
-        loadGames();
+        loadGames($conn);
       }
 
       // For clicking from the categories
       if (isset($_POST['category'])) {
-        searchGames('category', lcfirst($_POST['category']));
+        searchGames($conn, 'category', lcfirst($_POST['category']));
       }
 
       // Searching at the search bar
       if ($_SERVER["REQUEST_METHOD"] == "GET") {
         if (isset($_GET['search'])) {
           $query = htmlentities($_GET['search']);
-          searchGames('search', $query);
-        } else loadGames();
+          searchGames($conn, 'search', $query);
+        } else loadGames($conn);
+      }
+
+      function loadGames($conn)
+      {
+        $query = "SELECT title, descp, tags FROM game";
+        $result = mysqli_query($conn, $query);
+
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_object()) {
+            renderGames($row);
+          }
+        }
+      }
+
+      function searchGames($conn, $cate, $tag)
+      {
+        if ($cate == 'category') {
+          $query = "SELECT title, descp, tags FROM game
+          WHERE '$tag' IN (tags)";
+        } else {
+          $query = "SELECT title, descp, tags FROM game
+          WHERE tags LIKE '%$tag%'";
+        }
+
+        $result = mysqli_query($conn, $query);
+
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_object()) {
+            renderGames($row);
+          }
+        }
       }
 
       function renderGames($game)
       {
         echo "<li class='card'>
-        <div class='thumbnail'>
-            <img src='https://placehold.co/200' alt='Game Thumbnail'>
-        </div>
-        <div class='info'>
+          <div class='thumbnail'>
+              <img src='https://placehold.co/200' alt='Game Thumbnail'>
+          </div>
+          <div class='info'>
             <h4>{$game->title}</h4>
-            <p>{$game->desc}</p>
+            <p>{$game->descp}</p>
             <form action='game.php' method='get'>
                 <button name='PlayButton' value='{$game->title}' type='submit'>PLAY</button>
             </form>
-        </div>
-    </li>";
+          </div>
+        </li>";
       }
 
-      function searchGames($location, $query)
-      {
-        $filtered = [];
-
-        if ($location == 'category') {
-          $filtered = array_filter($GLOBALS['games'], function ($game) use ($query) {
-            return in_array($query, $game->tags);
-          });
-        } else {
-          $filtered = array_filter($GLOBALS['games'], function ($game) use ($query) {
-            return str_contains($game->title, $query);
-          });
-        }
-        foreach ($filtered as $game) renderGames($game);
-      }
-
-      function loadGames()
-      {
-        foreach ($GLOBALS['games'] as $game) {
-          renderGames($game);
-        }
-      }
+      $conn->close();
       ?>
       <a class="backtop" href="#"><img src="./assets/img/icons/top.svg" alt="Back to Top"></a>
   </main>
