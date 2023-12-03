@@ -104,7 +104,7 @@ if (!isset($_COOKIE[$name]))
     <ul id="categories" role="list">
       <?php
       // For echoing the category buttons
-      $buttons = array("arcade", "adventure", "casual", "sports", "puzzle", "racing", "shooter");
+      $buttons = array("action", "arcade", "adventure", "casual", "puzzle", "racing", "shooter", "simulation", "sports", "strategy");
 
       foreach ($buttons as $name) {
         echo "<li><form class='{$name}' method='post'><img src='assets/img/categories/{$name}.svg' alt='Category Icon'><input type='submit' name='category' value=" . ucfirst($name) . "></input></form></li>";

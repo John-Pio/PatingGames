@@ -135,81 +135,57 @@ main .card .info p {
 }
 
 .clear {
-  background-color: var(--shadow);
-}
-
-.arcade {
-background-color: rgb(210, 133, 88);
-box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .25);
-}
-
-.adventure {
-background-color: rgb(133, 199, 22);
-box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .25);
-}
-
-.casual {
-background-color: rgb(80, 169, 249);
-box-shadow: 0 8px 18px -8px rgba(80, 169, 249, .25);
-}
-
-.puzzle {
-background-color: rgb(255, 163, 0);
-box-shadow: 0 8px 18px -8px rgba(255, 163, 0, .25);
-}
-
-.racing {
-background-color: rgb(203, 125, 246);
-box-shadow: 0 8px 18px -8px rgba(203, 125, 246, .25);
-}
-
-.shooter {
-background-color: rgb(255, 74, 82);
-box-shadow: 0 8px 18px -8px rgba(255, 74, 82, .25);
-}
-
-.sports {
-background-color: rgb(64, 201, 20);
-box-shadow: 0 8px 18px -8px rgba(64, 201, 20, .25);
-}
-
-body.dark .clear {
   background-color: var(--text);
 }
 
-body.dark .arcade {
-background-color: rgb(193, 103, 51);
-box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .25);
+.action {
+  background-color: rgb(207, 38, 38);
+  box-shadow: 0 8px 18px -8px rgba(125, 40, 40. 50)
 }
 
-body.dark .adventure {
+.adventure {
 background-color: rgb(99, 147, 16);
-box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .25);
+box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .50);
 }
 
-body.dark .casual {
+.arcade {
+background-color: rgb(193, 103, 51);
+box-shadow: 0 8px 18px -8px rgba(210, 133, 88, .50);
+}
+
+.casual {
 background-color: rgb(45, 143, 228);
-box-shadow: 0 8px 18px -8px rgba(80, 169, 249, .25);
+box-shadow: 0 8px 18px -8px rgba(80, 169, 249, .50);
 }
 
-body.dark .puzzle {
+.puzzle {
 background-color: rgb(224, 142, 0);
-box-shadow: 0 8px 18px -8px rgba(255, 163, 0, .25);
+box-shadow: 0 8px 18px -8px rgba(255, 163, 0, .50);
 }
 
-body.dark .racing {
+.racing {
 background-color: rgb(173, 78, 224);
-box-shadow: 0 8px 18px -8px rgba(203, 125, 246, .25);
+box-shadow: 0 8px 18px -8px rgba(203, 125, 246, .50);
 }
 
-body.dark .shooter {
+.shooter {
 background-color: rgb(228, 93, 100);
-box-shadow: 0 8px 18px -8px rgba(255, 74, 82, .25);
+box-shadow: 0 8px 18px -8px rgba(255, 74, 82, .50);
 }
 
-body.dark .sports {
+.simulation {
+  background-color: rgb(93, 228, 205);
+  box-shadow: 0 8px 18px -8px rgba(86, 190, 194, 0.5);
+}
+
+.sports {
 background-color: rgb(77, 177, 44);
-box-shadow: 0 8px 18px -8px rgba(64, 201, 20, .25);
+box-shadow: 0 8px 18px -8px rgba(64, 201, 20, .50);
+}
+
+.strategy {
+  background-color: rgb(227, 227, 22);
+  box-shadow: 0 8px 18px -8px rgba(144, 144, 44. 50);
 }
 
 
