@@ -1,4 +1,7 @@
 <?php
+
+require_once 'components/games.php';
+
 // Sets the dark mode cookie if does not exist
 $name = "dark";
 if (!isset($_COOKIE[$name]))
@@ -101,26 +104,35 @@ if (!isset($_COOKIE[$name]))
         </g>
       </svg>
     </section>
+    <h4 class="featured title">Featured</h4>
+    <ul id="featured" role="list">
+      <?php
+      searchGames('category', 'featured');
+      ?>
+    </ul>
+    <h4 class="title">Browse by category</h4>
     <ul id="categories" role="list">
+      <li>
+        <form class="all" method="post">
+          <img src='assets/img/categories/all.svg' alt='Category Icon'>
+          <input type="submit" name="all" value="All">
+        </form>
+      </li>
       <?php
       // For echoing the category buttons
       $buttons = array("action", "arcade", "adventure", "casual", "puzzle", "racing", "shooter", "simulation", "sports", "strategy");
 
       foreach ($buttons as $name) {
-        echo "<li><form class='{$name}' method='post'><img src='assets/img/categories/{$name}.svg' alt='Category Icon'><input type='submit' name='category' value=" . ucfirst($name) . "></input></form></li>";
+        echo "<li><form class='{$name}' action='home.php#categories' method='post'><img src='assets/img/categories/{$name}.svg' alt='Category Icon'><input type='submit' name='category' value=" . ucfirst($name) . "></input></form></li>";
       }
       ?>
       <li>
-        <form class="clear" method="post"><input type="submit" name="clear" value="Clear"></form>
     </ul>
     <ul id="list" role="list">
       <?php
 
-      require_once 'components/games.php';
-
       // For clicking the clear button
-      if (isset($_POST['clear'])) {
-        clearGames();
+      if (isset($_POST['all'])) {
         loadGames();
       }
 
@@ -155,8 +167,6 @@ if (!isset($_COOKIE[$name]))
 
       function searchGames($location, $query)
       {
-        clearGames();
-
         $filtered = [];
 
         if ($location == 'category') {
@@ -176,14 +186,6 @@ if (!isset($_COOKIE[$name]))
         foreach ($GLOBALS['games'] as $game) {
           renderGames($game);
         }
-      }
-
-      function clearGames()
-      {
-        echo "<script>
-        const parent = document.getElementById('list');
-        parent.innerHTML = '';
-        </script>";
       }
       ?>
       <a class="backtop" href="#"><img src="./assets/img/icons/top.svg" alt="Back to Top"></a>

@@ -15,12 +15,12 @@ $games = array(
   (object)[
     'title' => 'Monster Eating',
     'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-    'tags' => ['arcade'],
+    'tags' => ['arcade', 'featured'],
     'link' => 'https://games.construct.net/941/latest',
   ], (object) [
     'title' => 'There Is No Game',
     'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-    'tags' => ['puzzle'],
+    'tags' => ['puzzle', 'featured'],
     'link' => 'https://games.construct.net/174/latest'
   ], (object) [
     'title' => 'Ultra Pixel Survive',
@@ -35,7 +35,7 @@ $games = array(
   ], (object) [
     'title' => 'Red Tie Runner',
     'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-    'tags' => ['racing', 'arcade'],
+    'tags' => ['racing', 'arcade', 'featured'],
     'link' => 'https://games.construct.net/1463/latest'
   ], (object) [
     'title' => 'Fireboy and Watergirl 1: Forest Temple',
