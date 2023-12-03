@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
 /* Consits of styles for
 0. css variables
 1. color theme
@@ -89,7 +91,7 @@ select {
 body {
   --accent: #3d9753;
   --accent-tint: #abeabb;
-  --accent-shade: #5fd37a;
+  --accent-shade: #59bb70;
   --background: #fff;
   --background-tint: #eee;
   --background-shade: var(--white);
@@ -108,6 +110,39 @@ body.dark {
   --text: #f5f5f5;
   --shadow: rgba(50, 50, 50, 1);
   --secondary: #315064;
+}
+
+.svg {
+  fill: var(--text);
+  transition: var(--transition);
+}
+
+.logo {
+  width: auto;
+}
+
+.st0 {
+  fill: #9A9A9A;
+}
+
+.st1 {
+  fill: #E0E0E0;
+}
+
+.st2 {
+  fill: #FF2B25;
+}
+
+.st3 {
+  fill: #2F2F2F;
+}
+
+.st4 {
+  fill: #FFFEFD;
+}
+
+.st5 {
+  fill: #606568;
 }
 
 ::selection {
@@ -191,7 +226,15 @@ header nav .left {
 }
 
 header nav .left form {
+  position: relative;
   margin: 0;
+}
+
+header nav form .search-icon {
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  transform: translateY(-50%);
 }
 
 header nav .left #search {
@@ -202,7 +245,7 @@ header nav .left #search {
   color: var(--text);
   width: 500px;
   height: 40px;
-  padding: 0 1em;
+  padding: 0 2.5em;
 }
 
 header nav .left #search::placeholder {
@@ -243,11 +286,16 @@ footer .container section ul {
   gap: 0.25em;
 }
 
+footer .container .categories,
+footer .container .links {
+  width: 10em;
+}
+
 footer .container h4 {
   padding-bottom: 0.25em;
 }
 
-footer .container img {
+footer .container svg.logo {
   padding-bottom: 1em;
 }
 
@@ -312,10 +360,6 @@ footer .container .icons ul {
 
   header nav .left form {
     display: none;
-  }
-
-  main {
-    margin: 3em 0;
   }
 
   footer .container {
