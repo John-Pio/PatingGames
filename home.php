@@ -165,7 +165,7 @@ if (!isset($_COOKIE[$name]))
 
       function loadGames($conn)
       {
-        $query = "SELECT title, descp, tags FROM game";
+        $query = "SELECT title, descp, tags, thumbnail FROM game";
         $result = mysqli_query($conn, $query);
 
         if ($result->num_rows > 0) {
@@ -198,7 +198,7 @@ if (!isset($_COOKIE[$name]))
       {
         echo "<li class='card'>
           <div class='thumbnail'>
-              <img src='https://placehold.co/200' alt='Game Thumbnail'>
+              <img src={$game->thumbnail} alt='Game Thumbnail'>
           </div>
           <div class='info'>
             <h4>{$game->title}</h4>
