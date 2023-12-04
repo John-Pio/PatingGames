@@ -239,6 +239,11 @@ main form:hover {
   transform: translate(0, -2px);
 }
 
+main .card:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
 main .card:hover img {
   transform: scale(1.25);
 }
@@ -256,6 +261,7 @@ main .card:hover img {
   main section {
     margin: 1em 0;
     flex-direction: column;
+    align-items: center;
   }
 
   main section h1 {

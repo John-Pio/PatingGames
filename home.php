@@ -144,7 +144,7 @@ if (!isset($_COOKIE[$name]))
           <div class='info'>
             <h4>{$game->title}</h4>
             <p>{$game->descp}</p>
-            <form action='game.php' method='get'>
+            <form action='gamepage.php' method='get'>
                 <button name='game' value='{$game->title}' type='submit'>PLAY</button>
             </form>
           </div>
