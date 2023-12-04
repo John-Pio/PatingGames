@@ -1,36 +1,59 @@
 body {
   color: rgb(255, 255, 255);
-  font-weight: bolder;
-  font-size: large;
+}
+
+form {
+  border-radius: var(--radius);
+  padding: 2em 0;
 }
 
 input[type='text'],
 input[type='email'],
 textarea {
+  color: var(--shadow);
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: var(--border);
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
 }
+
+input[type='text']::placeholder,
+input[type='email']::placeholder,
+textarea::placeholder {
+  color: var(--shadow);
+}
+
+input[type='text']:focus-visible,
+input[type='email']:focus-visible,
+textarea:focus-visible {
+  outline: var(--border);
+}
+
 .form-input {
+  width: inherit;
   margin-top: 16px;
   margin-bottom: 16px;
   resize: vertical;
 }
 
+.form-input > label {
+  color: var(--text);
+  font-weight: bolder;
+  font-size: large;
+}
+
 .card {
   transition: 0.3s;
   width: 50%;
-  background-color: #3a3e47;
-  display: flex;
+  background-color: var(--background);
   margin-left: auto;
   margin-right: auto;
-  border-style: solid;
-  border-color: rgb(0, 0, 0);
+  border: var(--border);
+  border-radius: var(--radius);
 }
 
 .card:hover {
@@ -38,35 +61,45 @@ textarea {
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.container {
-  padding: 10px 16px;
-  margin: auto;
+.card .container {
   width: 100%;
+  margin: 2.5em 0;
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .container h2 {
+  color: var(--text);
 }
 
 .btn {
-  background: #035496;
-  border-color: transparent;
+  background: var(--accent);
+  border: var(--border);
+  border-radius: var(--radius);
   color: #fff;
   font-size: 20px;
   font-weight: bold;
+  padding: 0.5em 1em;
   margin: 8px 40%;
+  transition: var(--transition-hover);
 }
+
 .btn:hover {
-  background-color: white;
-  color: Black;
-  border: 5px solid #035496;
+  background-color: var(--accent-shade);
 }
 
 .status-msg {
   padding: 10px;
   width: 30%;
-  margin: auto;
-  background-color: #2196f3;
+  margin: 2em auto;
+  background-color: var(--accent);
   color: white;
   opacity: 1;
   transition: opacity 0.6s;
   margin-bottom: 15px;
+  border-radius: var(--radius);
 }
 
 .closebtn {
@@ -80,6 +113,31 @@ textarea {
   transition: 0.3s;
 }
 
+.btn:hover,
 .closebtn:hover {
-  color: black;
+  transition: var(--transition-hover);
+  transform: translate(0, -2px);
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1199px) {
+  .card,
+  .status-msg {
+    width: var(--width);
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  .card,
+  .status-msg {
+    width: 85%;
+  }
+
+  .card .container {
+    margin: 2em 0;
+  }
+
+  .form-input {
+    transition: var(--transition);
+    margin-bottom: 0;
+  }
 }
