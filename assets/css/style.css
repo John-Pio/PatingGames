@@ -225,7 +225,7 @@ header nav .left #search:hover {
 }
 
 header nav .left #search:focus-visible {
-  outline: 3px solid var(--accent);
+  outline: var(--border);
 }
 
 header nav .right a {
