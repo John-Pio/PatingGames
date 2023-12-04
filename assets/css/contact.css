@@ -10,7 +10,9 @@ form {
 input[type='text'],
 input[type='email'],
 textarea {
-  color: var(--shadow);
+  background-color: var(--background-shade);
+  caret-color: var(--text);
+  color: var(--text);
   width: 100%;
   padding: 8px;
   border: var(--border);
@@ -19,12 +21,6 @@ textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-}
-
-input[type='text']::placeholder,
-input[type='email']::placeholder,
-textarea::placeholder {
-  color: var(--shadow);
 }
 
 input[type='text']:focus-visible,
