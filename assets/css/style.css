@@ -122,34 +122,6 @@ body.dark {
   transition: var(--transition);
 }
 
-.logo {
-  width: auto;
-}
-
-.st0 {
-  fill: #9a9a9a;
-}
-
-.st1 {
-  fill: #e0e0e0;
-}
-
-.st2 {
-  fill: #ff2b25;
-}
-
-.st3 {
-  fill: #2f2f2f;
-}
-
-.st4 {
-  fill: #fffefd;
-}
-
-.st5 {
-  fill: #606568;
-}
-
 ::selection {
   background: var(--secondary);
 }
@@ -208,6 +180,10 @@ header nav #menubr {
 header nav img,
 header nav svg {
   cursor: pointer;
+}
+
+header nav svg {
+  width: 50px;
 }
 
 header nav .left {
@@ -319,7 +295,8 @@ footer .container h4 {
   padding-bottom: 0.25em;
 }
 
-footer .container svg.logo {
+footer .container .copyright svg {
+  width: 150px;
   padding-bottom: 1em;
 }
 
@@ -392,6 +369,10 @@ footer .container .icons ul {
 
   header nav .right #navlnk li a {
     border: none;
+  }
+
+  header nav .right #navlnk li a:hover {
+    background-color: var(--background);
   }
 
   footer .container {
