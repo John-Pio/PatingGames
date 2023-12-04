@@ -79,7 +79,7 @@
       </svg>
       <?php
       if (basename($_SERVER['PHP_SELF']) === 'home.php')
-        echo "<form method='get'>
+        echo "<form action='home.php#categories' method='get'>
           <span class='search-icon'>&#128269;</span>
           <input type='text' name='search' id='search' placeholder='Search a game!'>"; ?>
       </form>

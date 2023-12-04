@@ -113,7 +113,7 @@ if (!isset($_COOKIE[$name]))
         die("Connection failed: " . $conn->connect_error);
       }
 
-      searchGames($conn, null, 'featured');
+      searchGames($conn, 'category', 'featured');
 
       $conn->close();
       ?>
@@ -178,10 +178,13 @@ if (!isset($_COOKIE[$name]))
       function searchGames($conn, $cate, $tag)
       {
         if ($cate == 'category') {
-          $query = "SELECT title, descp, tags FROM game
-          WHERE '$tag' IN (tags)";
+          $query = "SELECT title, descp, tags, thumbnail FROM game
+          WHERE FIND_IN_SET('$tag', tags) > 0";
+        } else if ($cate == 'search') {
+          $query = "SELECT title, descp, tags, thumbnail FROM game
+          WHERE title LIKE '%$tag%'";
         } else {
-          $query = "SELECT title, descp, tags FROM game
+          $query = "SELECT title, descp, tags, thumbnail FROM game
           WHERE tags LIKE '%$tag%'";
         }
 
