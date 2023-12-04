@@ -127,23 +127,23 @@ body.dark {
 }
 
 .st0 {
-  fill: #9A9A9A;
+  fill: #9a9a9a;
 }
 
 .st1 {
-  fill: #E0E0E0;
+  fill: #e0e0e0;
 }
 
 .st2 {
-  fill: #FF2B25;
+  fill: #ff2b25;
 }
 
 .st3 {
-  fill: #2F2F2F;
+  fill: #2f2f2f;
 }
 
 .st4 {
-  fill: #FFFEFD;
+  fill: #fffefd;
 }
 
 .st5 {
@@ -276,9 +276,10 @@ main {
 }
 
 main::before {
-  content: "";
+  content: '';
   position: absolute;
-  background: url("https://img.freepik.com/premium-vector/sketch-propolis-honey-comb-hand-drawn-grunge-honeycomb-black-white-image-bee-wax-comb-icon_502320-1891.jpg") repeat;
+  background: url('https://img.freepik.com/premium-vector/sketch-propolis-honey-comb-hand-drawn-grunge-honeycomb-black-white-image-bee-wax-comb-icon_502320-1891.jpg')
+    repeat;
   top: 0;
   right: 0;
   bottom: 0;
@@ -399,7 +400,7 @@ footer .container .icons ul {
     gap: 0;
   }
 
-  footer .container section:nth-child(4) {
+  footer .container section:nth-child(3) {
     order: -1;
   }
 }
