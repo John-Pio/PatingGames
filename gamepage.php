@@ -36,13 +36,16 @@
       $selected = $result->fetch_object();
       $tags = explode(',', $selected->tags);
 
-      echo "<iframe width='800' height='600' allowfullscreen src='{$selected->link}' frameborder='0' allowfullscreen='true' msallowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true' allowpaymentrequest='false' referrerpolicy='unsafe-url' sandbox='allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups' scrolling='no'></iframe>";
-
-      echo "<section class='description'><h4>Game Description</h4>{$selected->long_descp}</section>";
-
-      echo "<section class='tags'><h4>Tags</h4>";
-      foreach ($tags as $tag) echo "<p>{$tag}</p>";
+      echo "<section class='game'>";
+      echo "<iframe class='full-width' src='{$selected->link}'></iframe>";
+      echo "<h1>{$selected->title}</h1>";
+      echo "<p>{$selected->long_descp}</p>";
       echo "</section>";
+
+      echo "<section class='tags'><h3>Tags</h3>";
+      echo "<article>";
+      foreach ($tags as $tag) echo "<p>{$tag}</p>";
+      echo "</article></section>";
     }
 
     $stmt->close();

@@ -1,15 +1,111 @@
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: inherit;
+  display: grid;
+  grid-template-columns: 100px [content-start] 4fr 300px [content-end] 100px;
 }
 
-.description,
+main > * {
+  grid-column: content;
+}
+
+.game {
+  overflow: hidden;
+  background-color: var(--background);
+  display: grid;
+  grid-area: 1 / 2;
+  grid-template-columns: [full-width-start] 1em [content-start] 1fr [content-end] 1em [full-width-end];
+  margin: 2em 0;
+  border: var(--border);
+  border-radius: var(--radius);
+  padding-bottom: 1.5em;
+}
+
+.game iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+.game > * {
+  grid-column: content;
+}
+
+.game > .full-width {
+  grid-column: full-width;
+}
+
+.game h1 {
+  padding-top: 1em;
+}
+
+.game p {
+  padding-top: 0.5em;
+}
+
 .tags {
+  background-color: var(--background);
+  grid-area: 1 / 3;
+  height: min-content;
+  margin: 2em;
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 1em;
+}
+
+.tags h3 {
+  margin-bottom: 0.5em;
+}
+
+.tags p {
+  background-color: var(--background);
   text-align: center;
-  max-width: 1000px;
-  border: 1px solid #ccc;
-  margin: 0 auto;
-  padding: 10px;
+  width: max-content;
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 0.5em 1em;
+}
+
+.tags article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+  main {
+    grid-template-columns: 1em [content-start] 1fr [content-end] 1em;
+  }
+
+  .tags {
+    width: max-content;
+    margin: 0 0 2em 0;
+    grid-area: 2 / 2;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1199px) {
+  main {
+    grid-template-columns: 1em [content-start] 1fr [content-end] 1em;
+  }
+
+  .tags {
+    width: max-content;
+    margin: 0 0 2em 0;
+    grid-area: 2 / 2;
+  }
+}
+
+@media only screen and (max-width: 749px) {
+  main {
+    display: block;
+    padding: 1em;
+  }
+
+  .game {
+    margin: 0 0 1em 0;
+  }
+
+  .tags {
+    margin: 0 0 2em 0;
+  }
 }
