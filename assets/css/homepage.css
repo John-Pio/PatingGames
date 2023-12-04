@@ -1,17 +1,45 @@
+
 main {
-  margin: 1em 0 2em 0;
+  padding: 1em 0 2em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+main > * {
+  transition: var(--transition-hover);
+}
+
+main .featured {
+  margin-bottom: 1em;
+}
+
+main form {
+  margin-bottom: 0;
+}
+
+main .title {
+  font-family: 'Raleway', sans-serif;
+  width: var(--width);
+  margin-top: 1em;
+}
+
+main ul {
+  width: var(--width);
+}
+
+main section,
+main #categories {
+  border: var(--border);
 }
 
 main section {
   background-color: var(--background);
   width: var(--width);
   height: min-content;
-  border-radius: var(--border);
+  border-radius: var(--radius);
   margin-top: 1em;
-  padding: 2.5em 2em;
+  padding: 4em 2.5em;
   display: flex;
   justify-content: space-between;
 }
@@ -35,17 +63,22 @@ main section a {
   font-weight: bold;
   background-color: var(--accent);
   color: var(--white);
-  border-radius: var(--border);
+  border: var(--border);
+  border-radius: var(--radius);
   margin-top: 1em;
   padding: 1em 1.5em;
   transition: var(--transition);
 }
 
+main section svg {
+  animation: display 2s infinite;
+  transform-origin: center;
+}
+
 main #categories {
   background-color: var(--background);
-  width: var(--width);
   height: min-content;
-  border-radius: var(--border);
+  border-radius: var(--radius);
   margin: 1em 0;
   padding: 1em;
   display: flex;
@@ -68,12 +101,8 @@ main #categories li form input {
   border: none;
 }
 
-main #categories li:last-child form input {
-  color: var(--background);
-}
-
+main #featured,
 main #list {
-  width: var(--width);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1em;
@@ -87,8 +116,8 @@ main button,
 main #categories form {
   color: #fff;
   font-weight: bold;
-  border: none;
-  border-radius: var(--border);
+  border: var(--border);
+  border-radius: var(--radius);
   padding: 0.5em 0.8em;
   transition: var(--transition);
 }
@@ -103,7 +132,8 @@ main #categories button,
 main .card {
   background-color: var(--background);
   height: max-content;
-  border-radius: var(--border);
+  border: var(--border);
+  border-radius: var(--radius);
   transition: var(--transition);
 }
 
@@ -112,7 +142,7 @@ main .card .thumbnail {
 }
 
 main .card .thumbnail img {
-  border-radius: var(--border) var(--border) 0 0;
+  border-radius: var(--radius) var(--radius) 0 0;
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -134,8 +164,8 @@ main .card .info p {
   font-size: 14px;
 }
 
-.clear {
-  background-color: var(--text);
+.all {
+  background-color: var(--accent);
 }
 
 .action {
@@ -219,7 +249,8 @@ main .card:hover img {
 }
 
 @media only screen and (max-width: 749px) {
-  main {
+  main,
+  main .title {
     margin: 1em 0;
   }
   
@@ -236,7 +267,6 @@ main .card:hover img {
     width: 100%;
     margin-bottom: 0;
   }
-
   
   main section svg {
     order: -1;
@@ -246,5 +276,14 @@ main .card:hover img {
   main section a,
   main #categories {
     display: none;
+  }
+}
+
+@keyframes display {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }

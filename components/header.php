@@ -1,7 +1,7 @@
 <header>
   <nav>
     <div class="left">
-      <a href="index.php"> <svg class="logo" width="50" height="50" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <a href="home.php"> <svg class="logo" width="50" height="50" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
           <path class="st0" d="M219.1,202.5C127.9,244.7,62.1,310.7,62.7,326.7c0.3,8.3,4.5,23.2,16.6,35.9c7.1,7.5,26,21.2,39.3,22
 	c13.2,0.8,108.8-62.9,108.8-62.9l95.2-13.2l57.9,138.2c0,0,19,27.3,45.5,49.7s52.1,29.8,57.9,24.8c5.8-5-11.2-38.5-12.4-47.1
 	c-1.6-11.5-6.6-39.7,21.5-35.6c28.2,4.2,80.3,24.8,80.3,55.4s-20.7,64.5-79.4,64.5s-141.5-19-179.6-17.4s-72,4.9-106.7,19
@@ -79,7 +79,7 @@
       </svg>
       <?php
       if (basename($_SERVER['PHP_SELF']) === 'home.php')
-        echo "<form method='get'>
+        echo "<form action='home.php#categories' method='get'>
           <span class='search-icon'>&#128269;</span>
           <input type='text' name='search' id='search' placeholder='Search a game!'>"; ?>
       </form>
