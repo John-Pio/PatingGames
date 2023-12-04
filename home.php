@@ -1,6 +1,6 @@
 <?php
 
-require_once 'components/games.php';
+require_once 'components/database.php';
 
 // Sets the dark mode cookie if does not exist
 $name = "dark";
@@ -113,7 +113,7 @@ if (!isset($_COOKIE[$name]))
         die("Connection failed: " . $conn->connect_error);
       }
 
-      searchGames($conn, 'category', 'featured');
+      searchGames($conn, 'category', 'Featured');
 
       $conn->close();
       ?>
@@ -127,11 +127,11 @@ if (!isset($_COOKIE[$name]))
         </form>
       </li>
       <?php
-      // For echoing the category buttons
-      $buttons = array("action", "arcade", "adventure", "casual", "puzzle", "racing", "shooter", "simulation", "sports", "strategy");
+      // For the category buttons
+      $buttons = array("Action", "Arcade", "Adventure", "Casual", "Puzzle", "Racing", "Shooter", "Simulation", "Sports", "Strategy");
 
       foreach ($buttons as $name) {
-        echo "<li><form class='{$name}' action='home.php#categories' method='post'><img src='assets/img/categories/{$name}.svg' alt='Category Icon'><input type='submit' name='category' value=" . ucfirst($name) . "></input></form></li>";
+        echo "<li><form class=" . lcfirst($name) . " action='home.php#categories' method='post'><img src='assets/img/categories/{$name}.svg' alt='Category Icon'><input type='submit' name='category' value={$name}></input></form></li>";
       }
       ?>
       <li>
@@ -152,7 +152,7 @@ if (!isset($_COOKIE[$name]))
 
       // For clicking from the categories
       if (isset($_POST['category'])) {
-        searchGames($conn, 'category', lcfirst($_POST['category']));
+        searchGames($conn, 'category', $_POST['category']);
       }
 
       // Searching at the search bar
@@ -165,7 +165,7 @@ if (!isset($_COOKIE[$name]))
 
       function loadGames($conn)
       {
-        $query = "SELECT title, descp, tags, thumbnail FROM game";
+        $query = "SELECT title, descp, tags, thumbnail, long_descp FROM game";
         $result = mysqli_query($conn, $query);
 
         if ($result->num_rows > 0) {
@@ -178,13 +178,13 @@ if (!isset($_COOKIE[$name]))
       function searchGames($conn, $cate, $tag)
       {
         if ($cate == 'category') {
-          $query = "SELECT title, descp, tags, thumbnail FROM game
+          $query = "SELECT * FROM game
           WHERE FIND_IN_SET('$tag', tags) > 0";
         } else if ($cate == 'search') {
-          $query = "SELECT title, descp, tags, thumbnail FROM game
+          $query = "SELECT * FROM game
           WHERE title LIKE '%$tag%'";
         } else {
-          $query = "SELECT title, descp, tags, thumbnail FROM game
+          $query = "SELECT * FROM game
           WHERE tags LIKE '%$tag%'";
         }
 
@@ -207,7 +207,7 @@ if (!isset($_COOKIE[$name]))
             <h4>{$game->title}</h4>
             <p>{$game->descp}</p>
             <form action='game.php' method='get'>
-                <button name='PlayButton' value='{$game->title}' type='submit'>PLAY</button>
+                <button name='game' value='{$game->title}' type='submit'>PLAY</button>
             </form>
           </div>
         </li>";
