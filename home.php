@@ -120,7 +120,7 @@ if (!isset($_COOKIE[$name]))
           WHERE FIND_IN_SET('$tag', tags) > 0";
         } else if ($cate == 'search') {
           $query = "SELECT * FROM game
-          WHERE title LIKE '%$tag%'";
+          WHERE LOWER(title) LIKE LOWER('%$tag%')";
         } else {
           $query = "SELECT * FROM game
           WHERE tags LIKE '%$tag%'";
