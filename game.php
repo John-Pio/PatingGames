@@ -4,70 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>
+    <?php
+    echo htmlentities($_GET['game']);
+    ?> | PatingGames
+  </title>
   <link rel="stylesheet" href="assets/css/gamepage.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
   <script src="script.js" defer></script>
 </head>
 
 <body>
-  
+  <?php require 'components/header.php'; ?>
+  <main>
+    <?php
+    require_once 'components/games.php';
 
+    $dbname = "games";
+    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], null, $dbname);
 
+    $GameChoice = htmlentities($_GET['game']);
 
-  <?php
+    $query = "SELECT * FROM game WHERE title = ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("s", $GameChoice);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-  require 'components/header.php';
-  require_once 'components/games.php';
+    if ($result->num_rows > 0) {
+      $selected = $result->fetch_object();
+      $tags = explode(',', $selected->tags);
 
-  $GameChoice = htmlentities($_GET['PlayButton']);
+      echo "<iframe width='800' height='600' allowfullscreen src='{$selected->link}' frameborder='0' allowfullscreen='true' msallowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true' allowpaymentrequest='false' referrerpolicy='unsafe-url' sandbox='allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups' scrolling='no'></iframe>";
 
-  if ($selected = array_filter($games, function ($game) use ($GameChoice) {
-    return $game->title === $GameChoice;
-  })) {
-    $selected = reset($selected);
+      echo "<section class='description'><h4>Game Description</h4>{$selected->long_descp}</section>";
 
-    echo "
-    <main style='display: flex; justify-content: center; align-items: center; height: 100vh;'>
-        <div>
-            <iframe width='800' height='600' allow='fullscreen; autoplay; encrypted-media' src='{$selected->link}' frameborder='0' allowfullscreen='true' msallowfullscreen='true' mozallowfullscreen='true' webkitallowfullscreen='true' allowpaymentrequest='false' referrerpolicy='unsafe-url' sandbox='allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups' scrolling='no'></iframe>
-        </div>
-    </main>";
-    
-    
-    echo "<br>";
-    echo "<br>";
+      echo "<section class='tags'><h4>Tags</h4>";
+      foreach ($tags as $tag) echo "<p>{$tag}</p>";
+      echo "</section>";
+    }
 
-    
-    echo "<div style='text-align: center; max-width: 1000px; margin: 0 auto; border: 1px solid #ccc; padding: 10px;'>{$selected->descDetails}</div>";
-
-    echo "<br>";
-    echo "<br>";
-
-    echo "<div style='text-align: center; max-width: 200px; margin: 0 auto; border: 1px solid #ccc; padding: 10px;'>{$selected->tagDetails}</div>";
-
-    echo "<br>";
-    echo "<br>";
-
-
-
- 
-
-
-   
-
-  } else {
-    echo "hello: $GameChoice";
-  }
-
-  
-  require 'components/footer.php';
-
-  
-
-  
-  ?>
-
+    $stmt->close();
+    $conn->close();
+    ?>
+  </main>
+  <?php require 'components/footer.php'; ?>
 </body>
 
 </html>
