@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description,
+.tags {
+  text-align: center;
+  max-width: 1000px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  padding: 10px;
+}
