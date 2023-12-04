@@ -24,61 +24,51 @@
       <p class="text">Have fun!</p>
     </div>
 
-    <h2 style="text-align:center">Our Team</h2>
+    <h2>Our Team</h2>
     <div class="row">
-      <div class="column">
-        <div class="card">
-          <img src="assets\img\profiles\geofrey.jpg" alt="Geofrey" style="width:100%">
-          <div class="container">
-            <h2>Geofrey Gapasin</h2>
-            <p class="title">Games & Graphics</p>
-            <p>A Student from BSIT 3-4 of Pamantasan ng Lungsod ng Valenzuela and currently taking Bachelor of Science in Information Technology.</p>
-          </div>
+      <div class="card">
+        <img src="assets\img\profiles\geofrey.jpg" alt="Geofrey" style="width:100%">
+        <div class="container">
+          <h2>Geofrey Gapasin</h2>
+          <p class="title">Games & Graphics</p>
+          <p>A Student from BSIT 3-4 of Pamantasan ng Lungsod ng Valenzuela and currently taking Bachelor of Science in Information Technology.</p>
         </div>
       </div>
 
-      <div class="column">
-        <div class="card">
-          <img src="assets\img\profiles\mark.jpg" alt="Mark" style="width:100%">
-          <div class="container">
-            <h2>Mark Patani</h2>
-            <p class="title">Game Page</p>
-            <p>A Student from BSIT 3-4 of Pamantasan ng Lungsod ng Valenzuela and currently taking Bachelor of Science in Information Technology.</p>
-          </div>
+      <div class="card">
+        <img src="assets\img\profiles\mark.jpg" alt="Mark" style="width:100%">
+        <div class="container">
+          <h2>Mark Patani</h2>
+          <p class="title">Game Page</p>
+          <p>A Student from BSIT 3-4 of Pamantasan ng Lungsod ng Valenzuela and currently taking Bachelor of Science in Information Technology.</p>
         </div>
       </div>
 
-      <div class="column">
-        <div class="card">
-          <img src="assets\img\profiles\arvie.jpg" alt="Arvie" style="width:100%">
-          <div class="container">
-            <h2>Ray Vincent Rome</h2>
-            <p class="title">About Page</p>
-            <p>A Student from BSIT 3-4 of Pamantasan ng Lungsod ng Valenzuela and currently taking Bachelor of Science in Information Technology.</p>
+      <div class="card">
+        <img src="assets\img\profiles\arvie.jpg" alt="Arvie" style="width:100%">
+        <div class="container">
+          <h2>Ray Vincent Rome</h2>
+          <p class="title">About Page</p>
+          <p>A Student from BSIT 3-4 of Pamantasan ng Lungsod ng Valenzuela and currently taking Bachelor of Science in Information Technology.</p>
 
-          </div>
         </div>
       </div>
 
-      <div class="column">
-        <div class="card">
-          <img src="assets\img\profiles\aaron.jpg" alt="Aaron" style="width:100%">
-          <div class="container">
-            <h2>Aaron Suarez</h2>
-            <p class="title">Home Page</p>
-            <p>A Student from BSIT 3-4 of Pamantasan ng Lungsod ng Valenzuela and currently taking Bachelor of Science in Information Technology.</p>
-          </div>
+      <div class="card">
+        <img src="assets\img\profiles\aaron.jpg" alt="Aaron" style="width:100%">
+        <div class="container">
+          <h2>Aaron Suarez</h2>
+          <p class="title">Home Page</p>
+          <p>A Student from BSIT 3-4 of Pamantasan ng Lungsod ng Valenzuela and currently taking Bachelor of Science in Information Technology.</p>
         </div>
       </div>
 
-      <div class="column">
-        <div class="card">
-          <img src="assets\img\profiles\timmy.jpg" alt="Timothy" style="width:100%">
-          <div class="container">
-            <h2>Timothy James Ting</h2>
-            <p class="title">Contact Page</p>
-            <p>A Student from BSIT 3-4 of Pamantasan ng Lungsod ng Valenzuela and currently taking Bachelor of Science in Information Technology.</p>
-          </div>
+      <div class="card">
+        <img src="assets\img\profiles\timmy.jpg" alt="Timothy" style="width:100%">
+        <div class="container">
+          <h2>Timothy James Ting</h2>
+          <p class="title">Contact Page</p>
+          <p>A Student from BSIT 3-4 of Pamantasan ng Lungsod ng Valenzuela and currently taking Bachelor of Science in Information Technology.</p>
         </div>
       </div>
 
