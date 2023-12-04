@@ -19,7 +19,7 @@
   <?php require 'components/header.php'; ?>
   <main>
     <?php
-    require_once 'components/games.php';
+    require_once 'components/database.php';
 
     $dbname = "games";
     $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], null, $dbname);
