@@ -26,15 +26,18 @@
     <div class="right">
       <ul id="navlnk" role="list">
         <li>
-          <a href="https://patinggames.000webhostapp.com">Home</a>
+          <a href="home.php">Home</a>
         </li>
         <li>
-          <a href="https://patinggames.000webhostapp.com/contact">Contact Us</a>
+          <a href="contact.php">Contact Us</a>
         </li>
+        <?php
+        if (basename($_SERVER['PHP_SELF']) === 'home.php')
+          echo "<button id='add-button' type='button'>Add a game</button>";
+        ?>
         <li>
-          <a href="https://patinggames.000webhostapp.com/about">About Us</a>
+          <a href="about.php">About Us</a>
         </li>
-        <li><img id="toggle" src="./assets/img/icons/dark.svg" alt="Theme Icon"></li>
       </ul>
     </div>
   </nav>

@@ -233,8 +233,8 @@ main section a:hover {
   background-color: var(--accent-shade);
 }
 
-main button:hover,
-main form:hover {
+main .card button:hover,
+main #categories form:hover {
   transition: var(--transition-hover);
   transform: translate(0, -2px);
 }
@@ -246,6 +246,11 @@ main .card:hover {
 
 main .card:hover img {
   transform: scale(1.25);
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
 }
 
 .backtop:hover {
