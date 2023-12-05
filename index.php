@@ -22,6 +22,27 @@ if (!isset($_COOKIE[$name]))
 </head>
 
 <body>
+  <dialog id="add-dialog">
+    <h4>Add a Game!</h4>
+    <form action="#list" method="post" enctype=multipart/form-data>
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" required>
+      <label for="descp">Short Description</label>
+      <input type="text" name="descp" id="descp" required>
+      <label for="tags">Tags</label>
+      <input type="text" name="tags" id="tags" required>
+      <label for="link">Game Link</label>
+      <input type="text" name="link" id="link" required>
+      <label for="long-descp">Long Description</label>
+      <textarea name="long-descp" id="long-descp" cols="30" rows="10" required></textarea>
+      <label for="image">Thumbnail</label>
+      <input type="file" name="image" id="image" accept=".jpg, .jpeg, .png" required>
+      <div>
+        <input type="submit" value="Submit" name="submit">
+        <button type="button" id="close-add-dialog">Close</button>
+      </div>
+    </form>
+  </dialog>
   <?php require 'components/header.php' ?>
   <main>
     <section>
@@ -98,6 +119,35 @@ if (!isset($_COOKIE[$name]))
           $query = htmlentities($_GET['search']);
           searchGames($conn, 'search', $query);
         } else loadGames($conn);
+      }
+
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_POST['submit'])) {
+          // Retrieve values from the form
+          $title = $_POST["title"];
+          $descp = $_POST["descp"];
+          $longDescp = $_POST["long-descp"];
+          $tags = $_POST["tags"];
+          $link = $_POST["link"];
+
+          // Handle image upload
+          $folder = "assets/img/thumbnail/";
+          $directory = "C:/xampp/htdocs/PatingGames/$folder";
+          $thumbnail = $directory . str_replace(' ', '-', basename(($_FILES["image"]["name"])));
+
+          // Move the upload file to the directory
+          move_uploaded_file($_FILES["image"]["tmp_name"], $thumbnail);
+
+          $query = "INSERT INTO game (title, descp, tags, link, thumbnail, long_descp) VALUES (?, ?, ?, ?, ?, ?)";
+
+          $thumbnail = $folder . str_replace(' ', '-', basename(($_FILES["image"]["name"])));
+          $stmt = mysqli_prepare($conn, $query);
+          mysqli_stmt_bind_param($stmt, "ssssss", $title, $descp, $tags, $link, $thumbnail, $longDescp);
+
+          mysqli_stmt_execute($stmt);
+          mysqli_stmt_close($stmt);
+          loadGames($conn);
+        }
       }
 
       function loadGames($conn)

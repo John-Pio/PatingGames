@@ -248,9 +248,61 @@ main .card:hover img {
   transform: scale(1.25);
 }
 
-dialog form {
+#add-dialog {
+  background-color: var(--background);
+  border: var(--border);
+  border-radius: var(--radius);
+  z-index: 1;
+}
+
+#add-dialog form {
   display: flex;
   flex-direction: column;
+}
+
+#add-dialog label,
+#add-dialog input {
+  margin-top: 0.5em;
+  color: var(--text);
+}
+
+textarea {
+  color: var(--text);
+}
+
+input:not(input#image),
+textarea {
+  background-color: var(--background-shade);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 0.5em;
+  caret-color: var(--text);
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
+input::placeholder,
+label input[type='submit'],
+#close-add-dialog {
+  margin-top: 1em;
+}
+
+textarea {
+  height: 70px;
+}
+
+#add-dialog input[type='submit'],
+#add-dialog button {
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: bold;
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 0.5em 0.8em;
+  transition: var(--transition);
 }
 
 .backtop:hover {
