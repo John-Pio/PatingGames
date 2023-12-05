@@ -17,12 +17,12 @@
     <section class="categories">
       <h4>Links</h4>
       <ul role="list">
-        <li><a href="home.php">Home Page</a></li>
-        <li><a href="home.php#featured">Browse Games</a></li>
-        <li><a href="contact.php">Contact Page</a></li>
-        <li><a href="about.php">About Page</a></li>
+        <li><a href="https://patinggames.000webhostapp.com">Home Page</a></li>
+        <li><a href="https://patinggames.000webhostapp.com#featured">Browse Games</a></li>
+        <li><a href="https://patinggames.000webhostapp.com/contact">Contact Page</a></li>
+        <li><a href="https://patinggames.000webhostapp.com/about">About Page</a></li>
         <li><a href="https://github.com/John-Pio/PatingGames">Repository</a></li>
-        <li><a href="#">Sitemap</a></li>
+        <li><a href="https://drive.google.com/file/d/1ZuaEVtdGGHN5Hk17_Uc6ObrzpVwqQTFv/view?usp=sharing">Sitemap</a></li>
       </ul>
     </section>
     <section class="icons">

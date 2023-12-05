@@ -21,8 +21,7 @@
     <?php
     require_once 'components/database.php';
 
-    $dbname = "games";
-    $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], null, $dbname);
+    $conn = new mysqli($hostname, $username, $password, $database);
 
     $GameChoice = htmlentities($_GET['game']);
 

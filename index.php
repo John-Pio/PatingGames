@@ -45,7 +45,7 @@ if (!isset($_COOKIE[$name]))
     <h4 class="featured title">Featured</h4>
     <ul id="featured" role="list">
       <?php
-      $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], null, "games");
+      $conn = new mysqli($hostname, $username, $password, $database);
 
       if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -69,15 +69,14 @@ if (!isset($_COOKIE[$name]))
       $buttons = array("Action", "Arcade", "Adventure", "Casual", "Puzzle", "Racing", "Shooter", "Simulation", "Sports", "Strategy");
 
       foreach ($buttons as $name) {
-        echo "<li><form class=" . lcfirst($name) . " action='home.php#categories' method='post'><img src='assets/img/categories/{$name}.svg' alt='Category Icon'><input type='submit' name='category' value={$name}></input></form></li>";
+        echo "<li><form class=" . lcfirst($name) . " action='https://patinggames.000webhostapp.com#categories' method='post'><img src='assets/img/categories/" . lcfirst($name) . ".svg' alt='Category Icon'><input type='submit' name='category' value={$name}></input></form></li>";
       }
       ?>
       <li>
     </ul>
     <ul id="list" role="list">
       <?php
-      $dbname = "games";
-      $conn = new mysqli($GLOBALS['servername'], $GLOBALS['username'], null, $dbname);
+      $conn = new mysqli($hostname, $username, $password, $database);
 
       if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);

@@ -1,7 +1,7 @@
 <header>
   <nav>
     <div class="left">
-      <a href="home.php">
+      <a href="https://patinggames.000webhostapp.com">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" xmlns:v="https://vecta.io/nano">
           <path d="M219.1 202.5c-91.2 42.2-157 108.2-156.4 124.2.3 8.3 4.5 23.2 16.6 35.9 7.1 7.5 26 21.2 39.3 22 13.2.8 108.8-62.9 108.8-62.9l95.2-13.2 57.9 138.2s19 27.3 45.5 49.7 52.1 29.8 57.9 24.8-11.2-38.5-12.4-47.1c-1.6-11.5-6.6-39.7 21.5-35.6 28.2 4.2 80.3 24.8 80.3 55.4s-20.7 64.5-79.4 64.5-141.5-19-179.6-17.4-72 4.9-106.7 19c-25.7 10.4-54.6 29.8-53.8 32.3s33.1 13.2 71.2 18.2 111.7 4.1 124.1 22.3 15.7 44.4 11.6 83.3-2.5 70.6-1.6 70.6c.8 0 33.3-18.6 49.7-47.1 26.5-46.3 26.5-102.6 36.4-114.2s51.1-14.8 84.4-19C563.8 602 758 594 758 400.4c0-155.6-148.1-190.3-151.4-193.6s-8.7-27.6 2.5-49.7c8.8-17.4 23.7-43.9 19-50.5-5.8-8.2-59.6.8-99.3 21.5S464 175.2 464 175.2s-152.6-15.3-244.9 27.3h0z" fill="#9a9a9a" />
           <path d="M242.3 285.2c30.2-13.3 79.5-24.2 116.7-26.5 66.6-4.1 123.3 3.7 123.3 3.7s24.2 50.5 43.9 75.7c34.3 44.1 83.8 78.2 90.4 68.7 5.5-7.9 1.1-49.7-7.6-75.3-4.3-12.6-18.2-46.3-18.2-46.3s60.4 4.9 95.2 54.6c34.7 49.7 48.8 154.8-27.3 199.4-66.4 39-103.7 33.2-103.7 33.2s39.7-43.9 33.4-74.8c-6.6-32.6-21-41.4-45.8-46.1-15.7-2.9-150.4 0-185.9-.8s-89.1-3.3-126.1-14.6c-17.7-5.4-30.3-13.8-30.3-13.8l.8-29.8s-30.3 6.1-47.7 4.4c-17.4-1.6-41.9-11.6-43.6-14s19.6-21 37.3-34.7c22.1-17.2 59.6-47.2 95.2-63h0z" fill="#e0e0e0" />
@@ -17,8 +17,8 @@
         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
       </svg>
       <?php
-      if (basename($_SERVER['PHP_SELF']) === 'home.php')
-        echo "<form action='home.php#categories' method='get'>
+      if (basename($_SERVER['PHP_SELF']) === 'index.php')
+        echo "<form action='https://patinggames.000webhostapp.com#categories' method='get'>
           <span class='search-icon'>&#128269;</span>
           <input type='text' name='search' id='search' placeholder='Search a game!'>"; ?>
       </form>
@@ -26,13 +26,13 @@
     <div class="right">
       <ul id="navlnk" role="list">
         <li>
-          <a href="home.php">Home</a>
+          <a href="https://patinggames.000webhostapp.com">Home</a>
         </li>
         <li>
-          <a href="contact.php">Contact Us</a>
+          <a href="https://patinggames.000webhostapp.com/contact">Contact Us</a>
         </li>
         <li>
-          <a href="about.php">About Us</a>
+          <a href="https://patinggames.000webhostapp.com/about">About Us</a>
         </li>
         <li><img id="toggle" src="./assets/img/icons/dark.svg" alt="Theme Icon"></li>
       </ul>
